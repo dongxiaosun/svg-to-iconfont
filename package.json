@@ -1,0 +1,49 @@
+{
+  "name": "svg-to-font",
+  "version": "1.0.0",
+  "description": "Converts SVG to TTF/EOT/WOFF/SVG format fonts.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "cheerio": "^1.0.0-rc.2",
+    "colors-cli": "^1.0.18",
+    "copy-template-dir": "^1.4.0",
+    "ejs": "^2.6.1",
+    "fs-extra": "^7.0.0",
+    "html-minifier": "^3.5.20",
+    "svg2ttf": "^4.1.0",
+    "svgicons2svgfont": "^9.0.3",
+    "ttf2eot": "^2.0.0",
+    "ttf2woff": "^2.0.1",
+    "ttf2woff2": "^2.0.3"
+  },
+  "keywords": [
+    "webfont",
+    "icon",
+    "iconfont",
+    "font-face",
+    "compress",
+    "minify",
+    "font-cli",
+    "ttf",
+    "woff",
+    "eot",
+    "svg",
+    "css",
+    "base64"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AiMe1991/svg-to-font.git"
+  },
+  "homepage": "https://github.com/AiMe1991/svg-to-font#readme",
+  "author": {
+    "name": "sxd1991",
+    "email": "sxd.08@163.com"
+  },
+  "license": "MIT"
+}
