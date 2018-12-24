@@ -2,6 +2,7 @@ svg-to-font
 ---
 
 Read a set of SVG icons and ouput a TTF/EOT/WOFF/SVG font, Generator of fonts from SVG icons.
+将svg文件转换为字体图标
 
 ## Install
 
