@@ -13,9 +13,9 @@ npm i svg-to-iconfont
 ## Usage
 
 ```js
-const svgtofont = require("svg-to-iconfont");
+const svgtoiconfont = require("svg-to-iconfont");
  
-svgtofont({
+svgtoiconfont({
   dist: path.resolve(rootPath, "dist"), // output path(输出文件路径)
   src: path.resolve(rootPath, "svg"), // svg path(svg资源路径)
   fontName: "icomoon", // font name （字体名称）

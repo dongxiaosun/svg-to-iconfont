@@ -1,6 +1,5 @@
 const fs = require("fs-extra");
 const path = require("path");
-const base64Img = require("base64-img");
 const minify = require("html-minifier").minify;
 require("colors-cli/toxic");
 const {
