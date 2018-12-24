@@ -1,6 +1,6 @@
 {
-  "name": "svg-to-font",
-  "version": "1.0.0",
+  "name": "svg-to-iconfont",
+  "version": "1.0.1",
   "description": "Converts SVG to TTF/EOT/WOFF/SVG format fonts.",
   "main": "src/index.js",
   "scripts": {
@@ -21,6 +21,11 @@
     "ttf2woff": "^2.0.1",
     "ttf2woff2": "^2.0.3"
   },
+  "files": [
+    "package.json",
+    "src",
+    "README.md"
+  ],
   "keywords": [
     "webfont",
     "icon",
@@ -38,9 +43,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/AiMe1991/svg-to-font.git"
+    "url": "https://github.com/AiMe1991/svg-to-iconfont.git"
   },
-  "homepage": "https://github.com/AiMe1991/svg-to-font#readme",
+  "homepage": "https://github.com/AiMe1991/svg-to-iconfont#readme",
   "author": {
     "name": "sxd1991",
     "email": "sxd.08@163.com"

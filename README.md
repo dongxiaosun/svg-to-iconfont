@@ -1,4 +1,4 @@
-svg-to-font
+svg-to-iconfont
 ---
 
 Read a set of SVG icons and ouput a TTF/EOT/WOFF/SVG font, Generator of fonts from SVG icons.
@@ -7,13 +7,13 @@ Read a set of SVG icons and ouput a TTF/EOT/WOFF/SVG font, Generator of fonts fr
 ## Install
 
 ```bash
-npm i svg-to-font
+npm i svg-to-iconfont
 ```
 
 ## Usage
 
 ```js
-const svgtofont = require("svg-to-font");
+const svgtofont = require("svg-to-iconfont");
  
 svgtofont({
   dist: path.resolve(rootPath, "dist"), // output path(输出文件路径)
