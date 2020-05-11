@@ -17,16 +17,22 @@ module.exports = function create(options) {
   options.dist = options.dist || path.join(process.cwd(), "dist");
   // svg资源文件路径
   options.src = options.src || path.join(process.cwd(), "svg");
-  options.fontsDist = path.join(options.dist, "fonts");
+  // 输出的字体包文件名称
+  options.fontsDistName = options.fontsDistName || "fonts";
+  // 输出的字体包文件路径
+  options.fontsDist = path.join(options.dist, options.fontsDistName);
+  // 生成的图标字体的字体名称
+  options.fontName = options.fontName || "e6-icon";
+  // 生成图标字体前缀
+  options.classNamePrefix = options.classNamePrefix || "e6-icon";
+
   options.unicodeStart = options.unicodeStart || 10000;
   options.svg2ttf = options.svg2ttf || {};
   options.emptyDist = options.emptyDist;
-  options.fontName = options.fontName || "icomoon";
   options.svgicons2svgfont = options.svgicons2svgfont || {};
   options.svgicons2svgfont.fontName = options.fontName;
-  options.classNamePrefix = options.classNamePrefix || "e6-icon";
   options.website = {};
-  
+
   fs.emptyDirSync(options.dist);
   fs.emptyDirSync(options.fontsDist);
 
@@ -35,43 +41,55 @@ module.exports = function create(options) {
   let fontClassPath = path.join(options.dist, "index.html");
 
   return createSVG(options)
-    .then((UnicodeObject) => {
+    .then(UnicodeObject => {
       Object.keys(UnicodeObject).forEach(name => {
         let _code = UnicodeObject[name];
-        cssIconHtml.push(`<li class="class-icon"><i class="${options.classNamePrefix}-${name}"></i><p class="name">${options.classNamePrefix}-${name}</p></li>`);
-        cssString.push(`.${options.classNamePrefix}-${name}:before { content: "\\${_code.charCodeAt(0).toString(16)}"; }\n`);
+        cssIconHtml.push(
+          `<li class="class-icon"><i class="${options.classNamePrefix}-${name}"></i><p class="name">${options.classNamePrefix}-${name}</p></li>`
+        );
+        cssString.push(
+          `.${
+            options.classNamePrefix
+          }-${name}:before { content: "\\${_code
+            .charCodeAt(0)
+            .toString(16)}"; }\n`
+        );
       });
     })
-    .then(()=> createTTF(options))
+    .then(() => createTTF(options))
     .then(() => createEOT(options))
     .then(() => createWOFF(options))
     .then(() => {
       const font_temp = path.resolve(__dirname, "styles");
       return copyTemplate(font_temp, options.dist, {
         fontname: options.fontName,
+        fontsDistName: options.fontsDistName,
         cssString: cssString.join(""),
         timestamp: new Date().getTime(),
-        prefix: options.classNamePrefix || options.fontName
+        prefix: options.classNamePrefix
       });
     })
     .then(filePaths => {
       // output log
-      filePaths && filePaths.length > 0 && filePaths.forEach(filePath =>
+      filePaths &&
+        filePaths.length > 0 &&
+        filePaths.forEach(filePath =>
           console.log(`${"SUCCESS".green} Created ${filePath} `)
         );
     })
     .then(() => {
-        // default template
-        options.website.template = path.join(__dirname, "website", "index.ejs");
-        // template data
-        this.tempData = { ...options.website,
-          _link: `${options.fontName}.css`,
-          _IconHtml: cssIconHtml.join(""),
-        };
-        return createHTML({
-          outPath: options.website.template,
-          data: this.tempData
-        });
+      // default template
+      options.website.template = path.join(__dirname, "website", "index.ejs");
+      // template data
+      this.tempData = {
+        ...options.website,
+        _link: `index.css`,
+        _IconHtml: cssIconHtml.join("")
+      };
+      return createHTML({
+        outPath: options.website.template,
+        data: this.tempData
+      });
       // }
     })
     .then(str => {
@@ -83,5 +101,5 @@ module.exports = function create(options) {
         );
         console.log(`${"SUCCESS".green} Created ${fontClassPath} `);
       }
-    })
-}
+    });
+};
