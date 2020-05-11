@@ -1,3 +1,4 @@
+const _fs = require("fs");
 const fs = require("fs-extra");
 const path = require("path");
 const minify = require("html-minifier").minify;
@@ -33,7 +34,7 @@ module.exports = function create(options) {
   options.svgicons2svgfont.fontName = options.fontName;
   options.website = {};
 
-  fs.emptyDirSync(options.dist);
+  fs.emptyDirSync(path.join(options.dist, options.fontsDistName));
   fs.emptyDirSync(options.fontsDist);
 
   let cssString = [];
