@@ -13,6 +13,9 @@ npm i svg-to-iconfont
 ## Usage
 
 ```js
+const svgtoiconfont = require("../src");
+const path = require("path");
+const rootPath = path.resolve(process.cwd(), "test");
 const svgtoiconfont = require("svg-to-iconfont");
  
 svgtoiconfont({
