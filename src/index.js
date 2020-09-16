@@ -84,7 +84,7 @@ module.exports = function create(options) {
       // template data
       this.tempData = {
         ...options.website,
-        _link: `index.css`,
+        _link: `icon.css`,
         _IconHtml: cssIconHtml.join("")
       };
       return createHTML({

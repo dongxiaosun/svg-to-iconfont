@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("src/icomoon.eot?t=1600249757761"); /* IE9*/
+  src: url("src/icomoon.eot?t=1600249757761#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("src/icomoon.woff?t=1600249757761") format("woff"),
+  url("src/icomoon.ttf?t=1600249757761") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url("src/icomoon.svg?t=1600249757761#icomoon") format("svg"); /* iOS 4.1- */
+}
+
+[class^="e6-icon-"], [class*=" e6-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.e6-icon-add_fill:before { content: "\ea01"; }
+.e6-icon-add_line:before { content: "\ea02"; }
+.e6-icon-alarm_filll:before { content: "\ea03"; }
+.e6-icon-alarm_line:before { content: "\ea04"; }
+.e6-icon-arrow_down:before { content: "\ea05"; }
+.e6-icon-arrow_up:before { content: "\ea06"; }
+.e6-icon-barrier-alarm:before { content: "\ea07"; }
+.e6-icon-behavioral-portrait_fill:before { content: "\ea08"; }
+.e6-icon-behavioral-portrait_line:before { content: "\ea09"; }
+.e6-icon-camera-shelter:before { content: "\ea0a"; }
+.e6-icon-clear_fill:before { content: "\ea0b"; }
+.e6-icon-clear_line:before { content: "\ea0c"; }
+.e6-icon-delete_fill:before { content: "\ea0d"; }
+.e6-icon-delete_line:before { content: "\ea0e"; }
+.e6-icon-deviate-drive:before { content: "\ea0f"; }
+.e6-icon-distracted-driving:before { content: "\ea10"; }
+.e6-icon-drive-change:before { content: "\ea11"; }
+.e6-icon-export_fill:before { content: "\ea12"; }
+.e6-icon-export_line:before { content: "\ea13"; }
+.e6-icon-fatigue-driving:before { content: "\ea14"; }
+.e6-icon-frequent-lane-change:before { content: "\ea15"; }
+.e6-icon-front-car-close-range:before { content: "\ea16"; }
+.e6-icon-front-car-collision:before { content: "\ea17"; }
+.e6-icon-high-risk-duration_fill:before { content: "\ea18"; }
+.e6-icon-high-risk-duration_line:before { content: "\ea19"; }
+.e6-icon-high-risk-event_fill:before { content: "\ea1a"; }
+.e6-icon-high-risk-event_line:before { content: "\ea1b"; }
+.e6-icon-home_fill:before { content: "\ea1c"; }
+.e6-icon-home_line:before { content: "\ea1d"; }
+.e6-icon-Import_fill:before { content: "\ea1e"; }
+.e6-icon-Import_line:before { content: "\ea1f"; }
+.e6-icon-lane-shift:before { content: "\ea20"; }
+.e6-icon-line_fill:before { content: "\ea21"; }
+.e6-icon-line_line:before { content: "\ea22"; }
+.e6-icon-location_fill:before { content: "\ea23"; }
+.e6-icon-location_line:before { content: "\ea24"; }
+.e6-icon-menu_fill:before { content: "\ea25"; }
+.e6-icon-menu_line:before { content: "\ea26"; }
+.e6-icon-menu_off:before { content: "\ea27"; }
+.e6-icon-menu_open:before { content: "\ea28"; }
+.e6-icon-mileage_fill:before { content: "\ea29"; }
+.e6-icon-mileage_line:before { content: "\ea2a"; }
+.e6-icon-no-seat-belt:before { content: "\ea2b"; }
+.e6-icon-passerby-collision:before { content: "\ea2c"; }
+.e6-icon-phone:before { content: "\ea2d"; }
+.e6-icon-refresh_fill:before { content: "\ea2e"; }
+.e6-icon-refresh_line:before { content: "\ea2f"; }
+.e6-icon-search_fill:before { content: "\ea30"; }
+.e6-icon-search_line:before { content: "\ea31"; }
+.e6-icon-set-up_fill:before { content: "\ea32"; }
+.e6-icon-set-up_line:before { content: "\ea33"; }
+.e6-icon-smoking:before { content: "\ea34"; }
+.e6-icon-time_fill:before { content: "\ea35"; }
+.e6-icon-time_line:before { content: "\ea36"; }
+.e6-icon-tips_fill:before { content: "\ea37"; }
+.e6-icon-tips_line:before { content: "\ea38"; }
+.e6-icon-track_fill:before { content: "\ea39"; }
+.e6-icon-track_line:before { content: "\ea3a"; }
+.e6-icon-truck_fill:before { content: "\ea3b"; }
+.e6-icon-truck_line:before { content: "\ea3c"; }
+.e6-icon-vehicle-rollover:before { content: "\ea3d"; }
+.e6-icon-yawn:before { content: "\ea3e"; }
